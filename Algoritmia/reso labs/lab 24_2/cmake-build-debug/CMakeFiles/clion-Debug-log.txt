@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\tsdqr\Documents\Algoritmia 2025-2\Algoritmia\reso labs\lab 24_2 Select CMakeLists.txt
