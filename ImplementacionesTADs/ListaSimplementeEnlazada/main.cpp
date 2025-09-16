@@ -64,7 +64,7 @@ int main(int argc, char **argv) {
     // invierteListaRecursivo(listaFinal);
     // imprimir(listaFinal);
 
-    bubbleSort(listaFinal;
+    bubbleSort(listaFinal);
     imprimir(listaFinal);
     return 0;
 }

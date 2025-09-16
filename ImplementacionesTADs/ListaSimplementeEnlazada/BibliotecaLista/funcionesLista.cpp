@@ -246,7 +246,7 @@ void completarLista(struct Lista & lista) {
     }
 }
 
-/*mÃ©todo que ordena intercambiando elementos, para datos simples funciona
+/*metodo que ordena intercambiando elementos, para datos simples funciona
  para estructuras lo mejor es usar los punteros*/
 void bubbleSort(struct Lista & lista) {
 
