@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\999\Documents\PUCP\algoritmia-2025-2\Resoluciones Evaluaciones\listas exa 24_2 Select CMakeLists.txt
