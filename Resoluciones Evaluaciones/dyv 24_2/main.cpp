@@ -35,18 +35,19 @@ int main(int argc, char **argv) {
 
     int arreglito[N]{};
     int max=0,max_estratos=0;
-    for (int i=0;i<N;i++) {//n
-        //logn
-        int mayor_local=busca_mayor(matriz[i],0,N-1);
+    // CON ESTE FOR LA COMPLEJIDAD ES N2LOGN
+    for (int i=0;i<N;i++) {
+        int mayor_local=busca_mayor(matriz[i],0,N-1);//ESTO ES NLOGN
         if (mayor_local>max)
             max=mayor_local;
-        int cantidad_estratos=N-1- contar_estratos(matriz[i],0,N-1);
+        int cantidad_estratos=N-1- contar_estratos(matriz[i],0,N-1);//ESTE ES LOGN
         if (cantidad_estratos>=max_estratos) {
             max_estratos=cantidad_estratos;
-
         }
         arreglito[i]=cantidad_estratos;
+        //DENTRO DEL FOR ES NLOGN
     }
+    //ACA EL MAIN YA ES N2LOGN
     cout <<"La máxima pureza de las muestras es: "<< max<<endl;
     cout << "Las muestras con mayor cantidad de niveles con minerales son: ";
     for (int i=0;i<N;i++) {
