@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\tsdqr\Documents\algoritmia-2025-2\Resoluciones Evaluaciones\20226104_EX1_P1 Select CMakeLists.txt
