@@ -4,35 +4,40 @@
 using namespace std;
 #define N 3
 #define M 10
-int max(int a, int b) {
-    return (a > b) ? a : b;
-}
-int buscaCentro(int * arr,int ini,int medio, int fin) {
-    int may=0;
-
-    for (int i=medio;i>=ini;i--) {
-        if (arr[i]>may) {
-            may=arr[i];
-        }
-    }
-    for (int i=medio;i<=fin;i++) {
-        if (arr[i]>may) {
-            may=arr[i];
-        }
-    }
-    return may;
-
-
-}
+// int max(int a, int b) {
+//     return (a > b) ? a : b;
+// }
+// int buscaCentro(int * arr,int ini,int medio, int fin) {
+//     int may=0;
+//
+//     for (int i=medio;i>=ini;i--) {
+//         if (arr[i]>may) {
+//             may=arr[i];
+//         }
+//     }
+//     for (int i=medio;i<=fin;i++) {
+//         if (arr[i]>may) {
+//             may=arr[i];
+//         }
+//     }
+//     return may;
+// }
 int busca_mayor(int * arr,int ini,int fin) {
 
-    if (ini == fin) return arr[ini];
-    int medio = (ini + fin) / 2;
-    int izq = busca_mayor(arr,ini,medio);
-    int der = busca_mayor(arr,medio+1,fin);
-    int centro=buscaCentro(arr,ini,medio,fin);
+    if (ini == fin) {
+        return arr[ini];
+    }
 
-    return max(max(izq,der),centro);
+    int medio = (ini + fin) / 2;
+
+    int maxIzquierda = busca_mayor(arr, ini, medio);
+    int maxDerecha = busca_mayor(arr, medio + 1, fin);
+
+    if (maxIzquierda > maxDerecha) {
+        return maxIzquierda;
+    } else {
+        return maxDerecha;
+    }
 
 }
 int contar(int * arr,int ini,int fin,int buscar) {
