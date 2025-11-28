@@ -18,7 +18,6 @@ int main() {
         n++;
     }
 
-    bool cambio=true;
     while (!esColaVacia(cola)){
         ElementoCola elem1 = desencolar(cola);
         NodoCola * inicio=cola.inicio;

@@ -82,14 +82,16 @@ void reordenar(Lista &lista) {
 }
 //20226104
 int main() {
-
+    //[ (7,B) → (2,A) → (9,C) → (5,A) → (6,B) ]
     Lista lista;
     construir(lista);
-    insertarAlFinal(lista,{3,'C'});
-    insertarAlFinal(lista,{9,'A'});
-    insertarAlFinal(lista,{8,'C'});
-    insertarAlFinal(lista,{4,'A'});
+    insertarAlFinal(lista,{7,'B'});
+    insertarAlFinal(lista,{2,'A'});
+    insertarAlFinal(lista,{9,'C'});
+    insertarAlFinal(lista,{5,'A'});
     insertarAlFinal(lista,{6,'B'});
+    insertarAlFinal(lista,{3,'C'});
+    insertarAlFinal(lista,{1,'C'});
     imprimir(lista);
     reordenar(lista);
     imprimir(lista);
