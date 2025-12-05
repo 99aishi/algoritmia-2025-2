@@ -17,9 +17,9 @@ int buscar_codigo(int arr[], int ini, int fin, int cod) {
 
     // if (arr[medio]==cod) return medio;
 
-    if (arr[ini]<=arr[medio]) { // bien ordenado de izq a derecha (tdv no se ha llegado al punto de rotacion)
-        if (cod>=arr[ini] and cod<=arr[medio]) {
-            return buscar_codigo(arr, ini, medio, cod);
+    if (arr[ini]<=arr[medio]) { // bien ordenado de izq a derecha, ya que hay dos partes en el arreglo
+        if (cod>=arr[ini] and cod<=arr[medio]) { // dos partes ordenadas, asi que hay que validar que 
+            return buscar_codigo(arr, ini, medio, cod); // este ordenado para buscar binario
         }
         return buscar_codigo(arr, medio+1, fin, cod);
     }else {
